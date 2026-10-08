@@ -14,6 +14,7 @@ few more).
 | `lottery-odds.json` | Lottery odds and prizes |
 | `supply-growth.json` | Block rewards and supply growth |
 | `side-chains.json` | Side chains |
+| `robert-hirsch-on-medium.json` | Robert Hirsch's articles about Divi on Medium (see Credits) |
 
 ## Editing
 
@@ -49,5 +50,12 @@ bot's knowledge base app (`/kb` in Telegram), these categories are read-only and
 - `documentCount` is recomputed by the bot; you don't need to keep it right.
 - Keep the JSON valid: GitHub's editor doesn't check it.
 
-Other categories the bot uses (imported blogs and articles used with their authors' permission)
-are not in this repo.
+## Credits
+
+`robert-hirsch-on-medium.json` holds the Medium articles about Divi by Robert Hirsch
+([shandor.medium.com](https://shandor.medium.com), @hirscrs on Telegram), published here with his
+permission, given 2026-10-08. They remain his work: every entry carries a `citation` and a `url` to
+its original article.
+
+Other categories the bot uses (the diviproject.org blog, community tutorials and other docs) are
+not in this repo.
