@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "generated": "2026-02-14T21:30:00.000Z",
+  "source": "Divi Lottery Odds Spreadsheet",
+  "public": true,
+  "documents": [
+    {
+      "id": "lottery_odds",
+      "type": "economics",
+      "title": "Divi Lottery System and Odds",
+      "content": "# Divi Lottery System\n\n## Overview\n\nThe Divi lottery is a unique feature that rewards stakers with the chance to win large prizes. Each block staked generates a lottery ticket, and prizes are drawn randomly.\n\n## Lottery Structure\n\n- **Lottery Pool**: 50 DIVI per block (fixed, doesn't decrease with block rewards)\n- **Total Weekly Tickets**: 10,080 (one per block, ~60 second block time)\n- **Prizes Per Week**: 11 prizes drawn\n- **Prize Distribution**: All 11 prizes share the weekly lottery pool\n\n## Weekly Lottery Pool Calculation\n\n- 50 DIVI/block × 10,080 blocks/week = **504,000 DIVI** weekly lottery pool\n- Divided among 11 prizes = ~45,818 DIVI average per prize\n\n## Win Probability by Ticket Count\n\n| Tickets Held | Win Chance (per week) |\n|--------------|----------------------|\n| 1 | 0.11% |\n| 5 | 0.54% |\n| 10 | 1.09% |\n| 25 | 2.70% |\n| 50 | 5.33% |\n| 100 | 10.39% |\n| 500 | 42.14% |\n| 1,000 | 68.33% |\n| 2,500 | 93.84% |\n| 5,000 | 99.95% |\n| 10,080 | 100% |\n\n## How Lottery Tickets Work\n\n1. **Ticket Generation**: Each time you stake a block, you receive one lottery ticket\n2. **Ticket Validity**: Tickets are valid for one week (10,080 blocks)\n3. **Random Selection**: At each lottery draw, winning tickets are selected randomly\n4. **Cumulative Odds**: More tickets = higher probability of winning at least one prize\n\n## Factors Affecting Your Odds\n\n### Stake Size\nLarger stakes generate more tickets because you stake more blocks:\n- More DIVI staked → More blocks won → More lottery tickets\n- The relationship is linear with your proportion of the network stake\n\n### Network Total Stake\n- Your share of lottery tickets = (Your stake / Total network stake) × 10,080 tickets/week\n\n## Expected Value\n\n- Weekly lottery pool: 504,000 DIVI\n- If you hold X% of all tickets, expected weekly winnings = X% × 504,000 DIVI\n\n## Lottery vs Regular Staking Rewards\n\n| Source | Description | Predictability |\n|--------|-------------|----------------|\n| Block Rewards | 83% of block reward goes to staker | Predictable, proportional to stake |\n| Lottery | 50 DIVI/block lottery pool | Unpredictable, luck-based |\n\n## Key Points\n\n1. **Lottery is Supplemental**: The lottery adds excitement on top of regular staking rewards\n2. **Fair Distribution**: Every lottery ticket has an equal chance of winning\n3. **No Masternode Requirement**: Unlike some networks, anyone staking can participate\n4. **Fixed Pool Size**: The 50 DIVI/block lottery pool doesn't decrease with block rewards\n5. **Increasing Percentage**: As block rewards decrease over time, the lottery becomes a larger percentage of total rewards\n\n## Lottery as Percentage of Block Rewards Over Time\n\n| Year | Block Reward | Lottery/Block | Lottery % of Total |\n|------|-------------|---------------|-------------------|\n| 2018 | 1250 DIVI | 50 DIVI | 4% |\n| 2022 | 950 DIVI | 50 DIVI | 5.3% |\n| 2024 | 750 DIVI | 50 DIVI | 6.7% |\n| 2026 | 550 DIVI | 50 DIVI | 9.1% |\n| 2029+ | 250 DIVI | 50 DIVI | 20% |",
+      "keywords": [
+        "lottery",
+        "odds",
+        "chance",
+        "probability",
+        "tickets",
+        "prizes",
+        "staking",
+        "rewards",
+        "win",
+        "winner",
+        "draw",
+        "random",
+        "weekly",
+        "pool",
+        "50 divi",
+        "10080",
+        "blocks"
+      ],
+      "citation": "Divi Lottery Odds spreadsheet"
+    }
+  ],
+  "documentCount": 1
+}

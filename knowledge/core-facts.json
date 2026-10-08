@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "generated": "2026-02-14T22:00:00.000Z",
+  "source": "Divi Core Facts - Always Include",
+  "priority": "high",
+  "public": true,
+  "documents": [
+    {
+      "id": "core_facts",
+      "type": "core",
+      "title": "Divi Core Facts - MUST READ FIRST",
+      "content": "# CRITICAL DIVI FACTS - READ BEFORE ANSWERING\n\n## EARNINGS AND REWARDS = STAKING ONLY\n\n**Any questions about earnings, rate of return (RoR), APY, APR, or rewards are asking about STAKING, not masternodes.**\n\nMasternodes are deprecated. Staking is the ONLY financial reward for supporting the Divi network.\n\n## MASTERNODES ARE DEPRECATED\n\n**IMPORTANT: Masternodes were completely removed in Divi 3.0 (2024).**\n\n- There are NO masternode tiers (Copper, Silver, Gold, Platinum, Diamond)\n- There are NO masternode collateral requirements\n- ALL old masternode information is outdated and should NOT be mentioned\n- The ONLY way to earn rewards in Divi is through **regular staking**\n\n## Current Staking System (Post-3.0)\n\nDivi now uses a simple Proof of Stake system:\n\n- **No minimum stake required** - any amount of DIVI can be staked\n- **Stakers receive 83%** of each block reward (previously split between masternodes and stakers)\n- **Treasury receives 16%** (9% dev/marketing + 7% exchanges/liquidity)\n- **Charity receives 1%**\n\n## Current Block Rewards (2026)\n\n- **Block reward**: 550 DIVI per block\n- **Staker receives**: ~456 DIVI per block (83%)\n- **Block time**: ~60 seconds\n- **Blocks per day**: ~1,440\n- **Blocks per year**: ~525,600\n\n## Rate of Return Calculation\n\nWith 100% of supply staking:\n- Total supply: ~4.8 billion DIVI\n- Annual staking rewards: 525,600 blocks × 456 DIVI = ~240 million DIVI\n- **Theoretical RoR at 100% staking: ~5%**\n\nIn reality, not all DIVI is staking, so actual returns are HIGHER:\n- At 50% staking participation: ~10% RoR\n- At 25% staking participation: ~20% RoR\n- At 10% staking participation: ~50% RoR\n\n## Lottery System\n\n- **50 DIVI per block** goes to the lottery pool (fixed, doesn't decrease)\n- **10,080 lottery tickets** generated per week (one per block)\n- **11 prizes** drawn per week\n- Lottery is SEPARATE from regular staking rewards\n\n## What to Say When Asked About Masternodes\n\nIf users ask about masternodes, respond:\n\"Masternodes were deprecated in Divi 3.0. Divi now uses a simplified staking system where anyone can stake any amount of DIVI to earn rewards. There are no tiers or collateral requirements.\"\n\n## Common Misconceptions to Correct\n\n1. ❌ \"Divi has 5 masternode tiers\" → ✅ \"Masternodes were removed in v3.0\"\n2. ❌ \"You need 100,000 DIVI minimum\" → ✅ \"No minimum to stake\"\n3. ❌ \"Higher tiers get better rewards\" → ✅ \"All stakers earn proportional to stake\"\n4. ❌ \"45% goes to masternodes\" → ✅ \"83% goes to stakers (masternodes deprecated)\"",
+      "keywords": [
+        "masternode",
+        "masternodes",
+        "deprecated",
+        "removed",
+        "staking",
+        "stake",
+        "tier",
+        "tiers",
+        "copper",
+        "silver",
+        "gold",
+        "platinum",
+        "diamond",
+        "collateral",
+        "ror",
+        "rate of return",
+        "apy",
+        "apr",
+        "rewards",
+        "allocation",
+        "3.0",
+        "v3",
+        "current",
+        "now",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "citation": "Divi Assistant editors, curated core facts"
+    }
+  ],
+  "documentCount": 1
+}

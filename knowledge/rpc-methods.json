@@ -1,0 +1,1029 @@
+{
+  "version": "1.0",
+  "generated": "2026-02-14T18:32:34.055Z",
+  "source": "rpc-docs/src/data/rpcMethods.ts",
+  "public": true,
+  "documents": [
+    {
+      "id": "rpc_getbestblockhash",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getbestblockhash",
+      "content": "## getbestblockhash\n\n**Category:** Blockchain\n\n**Description:** Returns the hash of the best (tip) block in the longest blockchain.\n\n**Parameters:**\nNone\n\n**Returns:** String - the block hash hex encoded",
+      "keywords": [
+        "getbestblockhash",
+        "blockchain",
+        "returns",
+        "hash",
+        "best",
+        "(tip)",
+        "block",
+        "longest",
+        "blockchain."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getbestblockhash\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getbestblockhash\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getbestblockhash\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getblock",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getblock",
+      "content": "## getblock\n\n**Category:** Blockchain\n\n**Description:** Returns information about the block with the given hash.\n\n**Parameters:**\n- `hash` (string, required): The block hash\n- `verbose` (boolean, optional): If false, returns a hex-encoded string. If true, returns a JSON object Default: true\n\n**Returns:** Object or String - block data in JSON format (if verbose=true) or hex-encoded string (if verbose=false)",
+      "keywords": [
+        "getblock",
+        "blockchain",
+        "hash",
+        "verbose",
+        "returns",
+        "information",
+        "about",
+        "block",
+        "with",
+        "given",
+        "hash."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getblock\",\n    \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\", true]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getblock\",\n        \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\", True]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getblock\",\n    params: [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\", true]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getblockchaininfo",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getblockchaininfo",
+      "content": "## getblockchaininfo\n\n**Category:** Blockchain\n\n**Description:** Returns an object containing various state info regarding blockchain processing.\n\n**Parameters:**\nNone\n\n**Returns:** Object - current blockchain state information including chain, blocks, headers, difficulty, etc.",
+      "keywords": [
+        "getblockchaininfo",
+        "blockchain",
+        "returns",
+        "object",
+        "containing",
+        "various",
+        "state",
+        "info",
+        "regarding",
+        "blockchain",
+        "processing."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getblockchaininfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getblockchaininfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getblockchaininfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getblockcount",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getblockcount",
+      "content": "## getblockcount\n\n**Category:** Blockchain\n\n**Description:** Returns the number of blocks in the longest blockchain.\n\n**Parameters:**\nNone\n\n**Returns:** Number - the current block count",
+      "keywords": [
+        "getblockcount",
+        "blockchain",
+        "returns",
+        "number",
+        "blocks",
+        "longest",
+        "blockchain."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getblockcount\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getblockcount\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getblockcount\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getblockhash",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getblockhash",
+      "content": "## getblockhash\n\n**Category:** Blockchain\n\n**Description:** Returns hash of block in best-block-chain at height provided.\n\n**Parameters:**\n- `height` (number, required): The block height\n\n**Returns:** String - the block hash",
+      "keywords": [
+        "getblockhash",
+        "blockchain",
+        "height",
+        "returns",
+        "hash",
+        "block",
+        "best-block-chain",
+        "height",
+        "provided."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getblockhash\",\n    \"params\": [1000]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getblockhash\",\n        \"params\": [1000]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getblockhash\",\n    params: [1000]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getblockheader",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getblockheader",
+      "content": "## getblockheader\n\n**Category:** Blockchain\n\n**Description:** Returns information about the block header at the specified hash.\n\n**Parameters:**\n- `hash` (string, required): The block hash\n- `verbose` (boolean, optional): If false, returns a hex-encoded string. If true, returns a JSON object Default: true\n\n**Returns:** Object or String - block header data",
+      "keywords": [
+        "getblockheader",
+        "blockchain",
+        "hash",
+        "verbose",
+        "returns",
+        "information",
+        "about",
+        "block",
+        "header",
+        "specified",
+        "hash."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getblockheader\",\n    \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\", true]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getblockheader\",\n        \"params\": [\"00000000000fd08c2fb661d2fcb0d49abb3a91e5f27082ce64feed3b4dede2e2\", True]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getblockheader\",\n    params: [\"00000000000fd08c2fb661d2fcb0d49abb3a91e5f27082ce64feed3b4dede2e2\", true]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getchaintips",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getchaintips",
+      "content": "## getchaintips\n\n**Category:** Blockchain\n\n**Description:** Returns information about all known tips in the block tree, including the main chain as well as orphaned branches.\n\n**Parameters:**\nNone\n\n**Returns:** Array - array of chain tip objects with height, hash, branchlen, and status",
+      "keywords": [
+        "getchaintips",
+        "blockchain",
+        "returns",
+        "information",
+        "about",
+        "known",
+        "tips",
+        "block",
+        "tree,",
+        "including",
+        "main",
+        "chain",
+        "well",
+        "orphaned",
+        "branches."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getchaintips\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getchaintips\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getchaintips\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getdifficulty",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getdifficulty",
+      "content": "## getdifficulty\n\n**Category:** Blockchain\n\n**Description:** Returns the proof-of-work difficulty as a multiple of the minimum difficulty.\n\n**Parameters:**\nNone\n\n**Returns:** Number - the current difficulty",
+      "keywords": [
+        "getdifficulty",
+        "blockchain",
+        "returns",
+        "proof-of-work",
+        "difficulty",
+        "multiple",
+        "minimum",
+        "difficulty."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getdifficulty\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getdifficulty\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getdifficulty\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getmempoolinfo",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getmempoolinfo",
+      "content": "## getmempoolinfo\n\n**Category:** Blockchain\n\n**Description:** Returns details on the active state of the TX memory pool.\n\n**Parameters:**\nNone\n\n**Returns:** Object - mempool information including size, bytes, and usage",
+      "keywords": [
+        "getmempoolinfo",
+        "blockchain",
+        "returns",
+        "details",
+        "active",
+        "state",
+        "memory",
+        "pool."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getmempoolinfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getmempoolinfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getmempoolinfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getrawmempool",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getrawmempool",
+      "content": "## getrawmempool\n\n**Category:** Blockchain\n\n**Description:** Returns all transaction ids in memory pool as a JSON array of string transaction ids.\n\n**Parameters:**\n- `verbose` (boolean, optional): If false, returns array of transaction ids. If true, returns JSON object with transaction data Default: false\n\n**Returns:** Array or Object - list of transactions in the mempool",
+      "keywords": [
+        "getrawmempool",
+        "blockchain",
+        "verbose",
+        "returns",
+        "transaction",
+        "memory",
+        "pool",
+        "json",
+        "array",
+        "string",
+        "transaction",
+        "ids."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getrawmempool\",\n    \"params\": [false]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getrawmempool\",\n        \"params\": [False]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getrawmempool\",\n    params: [false]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_gettxout",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "gettxout",
+      "content": "## gettxout\n\n**Category:** Blockchain\n\n**Description:** Returns details about an unspent transaction output.\n\n**Parameters:**\n- `txid` (string, required): The transaction id\n- `n` (number, required): The output number\n- `includemempool` (boolean, optional): Whether to include the mempool Default: true\n\n**Returns:** Object or null - transaction output details, or null if spent or not found",
+      "keywords": [
+        "gettxout",
+        "blockchain",
+        "txid",
+        "n",
+        "includemempool",
+        "returns",
+        "details",
+        "about",
+        "unspent",
+        "transaction",
+        "output."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"gettxout\",\n    \"params\": [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1, true]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"gettxout\",\n        \"params\": [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1, True]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"gettxout\",\n    params: [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1, true]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_gettxoutsetinfo",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "gettxoutsetinfo",
+      "content": "## gettxoutsetinfo\n\n**Category:** Blockchain\n\n**Description:** Returns statistics about the unspent transaction output set.\n\n**Parameters:**\nNone\n\n**Returns:** Object - statistics including total amount, transaction count, and disk size",
+      "keywords": [
+        "gettxoutsetinfo",
+        "blockchain",
+        "returns",
+        "statistics",
+        "about",
+        "unspent",
+        "transaction",
+        "output",
+        "set."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"gettxoutsetinfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"gettxoutsetinfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"gettxoutsetinfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_verifychain",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "verifychain",
+      "content": "## verifychain\n\n**Category:** Blockchain\n\n**Description:** Verifies blockchain database.\n\n**Parameters:**\n- `checklevel` (number, optional): How thorough the block verification is (0-4) Default: 3\n- `numblocks` (number, optional): The number of blocks to check Default: 288\n\n**Returns:** Boolean - true if verified, false if verification failed",
+      "keywords": [
+        "verifychain",
+        "blockchain",
+        "checklevel",
+        "numblocks",
+        "verifies",
+        "blockchain",
+        "database."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"verifychain\",\n    \"params\": [3, 1000]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"verifychain\",\n        \"params\": [3, 1000]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"verifychain\",\n    params: [3, 1000]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getlotteryblockwinners",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "getlotteryblockwinners",
+      "content": "## getlotteryblockwinners\n\n**Category:** Blockchain\n\n**Description:** Returns the lottery winners for a specific block.\n\n**Parameters:**\n- `blockhash` (string, required): The block hash\n\n**Returns:** Object - lottery winners information for the block",
+      "keywords": [
+        "getlotteryblockwinners",
+        "blockchain",
+        "blockhash",
+        "returns",
+        "lottery",
+        "winners",
+        "specific",
+        "block."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getlotteryblockwinners\",\n    \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getlotteryblockwinners\",\n        \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getlotteryblockwinners\",\n    params: [\"00000000000fd08c2fb661d2fcb0d49abb3a91e5f27082ce64feed3b4dede2e2\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_reverseblocktransactions",
+      "type": "rpc_method",
+      "category": "Blockchain",
+      "title": "reverseblocktransactions",
+      "content": "## reverseblocktransactions\n\n**Category:** Blockchain\n\n**Description:** Returns block transactions in reverse order.\n\n**Parameters:**\n- `blockhash` (string, required): The block hash\n\n**Returns:** Array - transactions in reverse order",
+      "keywords": [
+        "reverseblocktransactions",
+        "blockchain",
+        "blockhash",
+        "returns",
+        "block",
+        "transactions",
+        "reverse",
+        "order."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"reverseblocktransactions\",\n    \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"reverseblocktransactions\",\n        \"params\": [\"8dc18ee75a120b0d8be664ca5d3a241a56147b7308c9202c1d18fd439b361e66\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"reverseblocktransactions\",\n    params: [\"00000000000fd08c2fb661d2fcb0d49abb3a91e5f27082ce64feed3b4dede2e2\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getconnectioncount",
+      "type": "rpc_method",
+      "category": "Network",
+      "title": "getconnectioncount",
+      "content": "## getconnectioncount\n\n**Category:** Network\n\n**Description:** Returns the number of connections to other nodes.\n\n**Parameters:**\nNone\n\n**Returns:** Number - the connection count",
+      "keywords": [
+        "getconnectioncount",
+        "network",
+        "returns",
+        "number",
+        "connections",
+        "other",
+        "nodes."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getconnectioncount\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getconnectioncount\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getconnectioncount\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getnettotals",
+      "type": "rpc_method",
+      "category": "Network",
+      "title": "getnettotals",
+      "content": "## getnettotals\n\n**Category:** Network\n\n**Description:** Returns information about network traffic, including bytes in, bytes out, and current time.\n\n**Parameters:**\nNone\n\n**Returns:** Object - network traffic statistics",
+      "keywords": [
+        "getnettotals",
+        "network",
+        "returns",
+        "information",
+        "about",
+        "network",
+        "traffic,",
+        "including",
+        "bytes",
+        "bytes",
+        "out,",
+        "current",
+        "time."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getnettotals\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getnettotals\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getnettotals\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getnetworkinfo",
+      "type": "rpc_method",
+      "category": "Network",
+      "title": "getnetworkinfo",
+      "content": "## getnetworkinfo\n\n**Category:** Network\n\n**Description:** Returns an object containing various state info regarding P2P networking.\n\n**Parameters:**\nNone\n\n**Returns:** Object - network information including version, protocol version, connections, networks, and local addresses",
+      "keywords": [
+        "getnetworkinfo",
+        "network",
+        "returns",
+        "object",
+        "containing",
+        "various",
+        "state",
+        "info",
+        "regarding",
+        "networking."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getnetworkinfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getnetworkinfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getnetworkinfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getpeerinfo",
+      "type": "rpc_method",
+      "category": "Network",
+      "title": "getpeerinfo",
+      "content": "## getpeerinfo\n\n**Category:** Network\n\n**Description:** Returns data about each connected network node as a JSON array of objects.\n\n**Parameters:**\nNone\n\n**Returns:** Array - information about each peer connection",
+      "keywords": [
+        "getpeerinfo",
+        "network",
+        "returns",
+        "data",
+        "about",
+        "each",
+        "connected",
+        "network",
+        "node",
+        "json",
+        "array",
+        "objects."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getpeerinfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getpeerinfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getpeerinfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_ping",
+      "type": "rpc_method",
+      "category": "Network",
+      "title": "ping",
+      "content": "## ping\n\n**Category:** Network\n\n**Description:** Requests that a ping be sent to all other nodes, to measure ping time. Results provided in getpeerinfo.\n\n**Parameters:**\nNone\n\n**Returns:** null - no return value, check getpeerinfo for results",
+      "keywords": [
+        "ping",
+        "network",
+        "requests",
+        "that",
+        "ping",
+        "sent",
+        "other",
+        "nodes,",
+        "measure",
+        "ping",
+        "time.",
+        "results",
+        "provided",
+        "getpeerinfo."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"ping\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"ping\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"ping\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getinfo",
+      "type": "rpc_method",
+      "category": "General",
+      "title": "getinfo",
+      "content": "## getinfo\n\n**Category:** General\n\n**Description:** Returns an object containing various state info about the node and blockchain.\n\n**Parameters:**\nNone\n\n**Returns:** Object - general information including version, protocol version, wallet version, balance, blocks, connections, and more",
+      "keywords": [
+        "getinfo",
+        "general",
+        "returns",
+        "object",
+        "containing",
+        "various",
+        "state",
+        "info",
+        "about",
+        "node",
+        "blockchain."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getinfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getinfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getinfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_help",
+      "type": "rpc_method",
+      "category": "General",
+      "title": "help",
+      "content": "## help\n\n**Category:** General\n\n**Description:** List all commands, or get help for a specified command.\n\n**Parameters:**\n- `command` (string, optional): The command to get help on\n\n**Returns:** String - help text",
+      "keywords": [
+        "help",
+        "general",
+        "command",
+        "list",
+        "commands,",
+        "help",
+        "specified",
+        "command."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"help\",\n    \"params\": [\"getblockcount\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"help\",\n        \"params\": [\"getblockcount\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"help\",\n    params: [\"getblockcount\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getmininginfo",
+      "type": "rpc_method",
+      "category": "Mining",
+      "title": "getmininginfo",
+      "content": "## getmininginfo\n\n**Category:** Mining\n\n**Description:** Returns a JSON object containing mining-related information.\n\n**Parameters:**\nNone\n\n**Returns:** Object - mining information including blocks, current block size, current block weight, difficulty, network hashps, and pool info",
+      "keywords": [
+        "getmininginfo",
+        "mining",
+        "returns",
+        "json",
+        "object",
+        "containing",
+        "mining-related",
+        "information."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getmininginfo\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getmininginfo\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getmininginfo\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_decoderawtransaction",
+      "type": "rpc_method",
+      "category": "RawTransactions",
+      "title": "decoderawtransaction",
+      "content": "## decoderawtransaction\n\n**Category:** RawTransactions\n\n**Description:** Returns a JSON object representing the serialized, hex-encoded transaction.\n\n**Parameters:**\n- `hexstring` (string, required): The transaction hex string\n\n**Returns:** Object - decoded transaction data",
+      "keywords": [
+        "decoderawtransaction",
+        "rawtransactions",
+        "hexstring",
+        "returns",
+        "json",
+        "object",
+        "representing",
+        "serialized,",
+        "hex-encoded",
+        "transaction."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"decoderawtransaction\",\n    \"params\": [\"01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"decoderawtransaction\",\n        \"params\": [\"01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"decoderawtransaction\",\n    params: [\"01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_decodescript",
+      "type": "rpc_method",
+      "category": "RawTransactions",
+      "title": "decodescript",
+      "content": "## decodescript\n\n**Category:** RawTransactions\n\n**Description:** Decodes a hex-encoded script.\n\n**Parameters:**\n- `hexstring` (string, required): The hex-encoded script\n\n**Returns:** Object - decoded script information",
+      "keywords": [
+        "decodescript",
+        "rawtransactions",
+        "hexstring",
+        "decodes",
+        "hex-encoded",
+        "script."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"decodescript\",\n    \"params\": [\"76a914c564c740c6900b93afc9f1bdaef0a9d466adf6ee88ac\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"decodescript\",\n        \"params\": [\"76a914c564c740c6900b93afc9f1bdaef0a9d466adf6ee88ac\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"decodescript\",\n    params: [\"76a914c564c740c6900b93afc9f1bdaef0a9d466adf6ee88ac\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getrawtransaction",
+      "type": "rpc_method",
+      "category": "RawTransactions",
+      "title": "getrawtransaction",
+      "content": "## getrawtransaction\n\n**Category:** RawTransactions\n\n**Description:** Returns the raw transaction data. If verbose=0, returns a hex string. If verbose=1, returns an object with transaction details.\n\n**Parameters:**\n- `txid` (string, required): The transaction id\n- `verbose` (number, optional): If 0, returns hex string. If 1, returns JSON object with transaction details Default: 0\n\n**Returns:** String or Object - raw transaction hex string or decoded transaction object",
+      "keywords": [
+        "getrawtransaction",
+        "rawtransactions",
+        "txid",
+        "verbose",
+        "returns",
+        "transaction",
+        "data.",
+        "verbose=0,",
+        "returns",
+        "string.",
+        "verbose=1,",
+        "returns",
+        "object",
+        "with",
+        "transaction",
+        "details."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getrawtransaction\",\n    \"params\": [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getrawtransaction\",\n        \"params\": [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getrawtransaction\",\n    params: [\"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", 1]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getaddressbalance",
+      "type": "rpc_method",
+      "category": "AddressIndex",
+      "title": "getaddressbalance",
+      "content": "## getaddressbalance\n\n**Category:** AddressIndex\n\n**Description:** Returns the balance for an address or list of addresses.\n\n**Parameters:**\n- `addresses` (array, required): Array of base58check encoded addresses\n\n**Returns:** Object - balance information including balance and received amounts",
+      "keywords": [
+        "getaddressbalance",
+        "addressindex",
+        "addresses",
+        "returns",
+        "balance",
+        "address",
+        "list",
+        "addresses."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getaddressbalance\",\n    \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getaddressbalance\",\n        \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getaddressbalance\",\n    params: [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getaddressdeltas",
+      "type": "rpc_method",
+      "category": "AddressIndex",
+      "title": "getaddressdeltas",
+      "content": "## getaddressdeltas\n\n**Category:** AddressIndex\n\n**Description:** Returns all changes for an address in a given block range.\n\n**Parameters:**\n- `addresses` (array, required): Array of base58check encoded addresses\n- `start` (number, optional): The start block height\n- `end` (number, optional): The end block height\n\n**Returns:** Array - array of delta objects showing balance changes",
+      "keywords": [
+        "getaddressdeltas",
+        "addressindex",
+        "addresses",
+        "start",
+        "end",
+        "returns",
+        "changes",
+        "address",
+        "given",
+        "block",
+        "range."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getaddressdeltas\",\n    \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getaddressdeltas\",\n        \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getaddressdeltas\",\n    params: [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getaddresstxids",
+      "type": "rpc_method",
+      "category": "AddressIndex",
+      "title": "getaddresstxids",
+      "content": "## getaddresstxids\n\n**Category:** AddressIndex\n\n**Description:** Returns the txids for an address or addresses in a given block range.\n\n**Parameters:**\n- `addresses` (array, required): Array of base58check encoded addresses\n- `start` (number, optional): The start block height\n- `end` (number, optional): The end block height\n\n**Returns:** Array - array of transaction ids",
+      "keywords": [
+        "getaddresstxids",
+        "addressindex",
+        "addresses",
+        "start",
+        "end",
+        "returns",
+        "txids",
+        "address",
+        "addresses",
+        "given",
+        "block",
+        "range."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getaddresstxids\",\n    \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getaddresstxids\",\n        \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getaddresstxids\",\n    params: [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"], \"start\": 1, \"end\": 200}]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getaddressutxos",
+      "type": "rpc_method",
+      "category": "AddressIndex",
+      "title": "getaddressutxos",
+      "content": "## getaddressutxos\n\n**Category:** AddressIndex\n\n**Description:** Returns all unspent outputs for an address or addresses.\n\n**Parameters:**\n- `addresses` (array, required): Array of base58check encoded addresses\n\n**Returns:** Array - array of unspent transaction outputs",
+      "keywords": [
+        "getaddressutxos",
+        "addressindex",
+        "addresses",
+        "returns",
+        "unspent",
+        "outputs",
+        "address",
+        "addresses."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getaddressutxos\",\n    \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getaddressutxos\",\n        \"params\": [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getaddressutxos\",\n    params: [{\"addresses\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]}]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getspentinfo",
+      "type": "rpc_method",
+      "category": "AddressIndex",
+      "title": "getspentinfo",
+      "content": "## getspentinfo\n\n**Category:** AddressIndex\n\n**Description:** Returns the spending information for a transaction output.\n\n**Parameters:**\n- `txid` (string, required): The transaction id\n- `index` (number, required): The output index\n\n**Returns:** Object - information about the spending transaction",
+      "keywords": [
+        "getspentinfo",
+        "addressindex",
+        "txid",
+        "index",
+        "returns",
+        "spending",
+        "information",
+        "transaction",
+        "output."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getspentinfo\",\n    \"params\": [{\"txid\": \"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", \"index\": 0}]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getspentinfo\",\n        \"params\": [{\"txid\": \"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", \"index\": 0}]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getspentinfo\",\n    params: [{\"txid\": \"6b566fba7cef28b680372cb490477cb805985818a5ac6b44fe6d3a348370593a\", \"index\": 0}]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_validateaddress",
+      "type": "rpc_method",
+      "category": "Utility",
+      "title": "validateaddress",
+      "content": "## validateaddress\n\n**Category:** Utility\n\n**Description:** Returns information about the given Divi address.\n\n**Parameters:**\n- `address` (string, required): The Divi address to validate\n\n**Returns:** Object - validation information including isvalid, address, and scriptPubKey",
+      "keywords": [
+        "validateaddress",
+        "utility",
+        "address",
+        "returns",
+        "information",
+        "about",
+        "given",
+        "divi",
+        "address."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"validateaddress\",\n    \"params\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"validateaddress\",\n        \"params\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"validateaddress\",\n    params: [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_verifymessage",
+      "type": "rpc_method",
+      "category": "Utility",
+      "title": "verifymessage",
+      "content": "## verifymessage\n\n**Category:** Utility\n\n**Description:** Verifies a signed message.\n\n**Parameters:**\n- `address` (string, required): The Divi address to use for the signature\n- `signature` (string, required): The signature provided by the signer in base64 encoding\n- `message` (string, required): The message that was signed\n\n**Returns:** Boolean - true if the signature is verified, false if not",
+      "keywords": [
+        "verifymessage",
+        "utility",
+        "address",
+        "signature",
+        "message",
+        "verifies",
+        "signed",
+        "message."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"verifymessage\",\n    \"params\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"H+...signature...==\", \"my message\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"verifymessage\",\n        \"params\": [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"H+...signature...==\", \"my message\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"verifymessage\",\n    params: [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"H+...signature...==\", \"my message\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_createmultisig",
+      "type": "rpc_method",
+      "category": "Utility",
+      "title": "createmultisig",
+      "content": "## createmultisig\n\n**Category:** Utility\n\n**Description:** Creates a multi-signature address with n signature of m keys required.\n\n**Parameters:**\n- `nrequired` (number, required): The number of required signatures out of the n keys\n- `keys` (array, required): Array of keys which are Divi addresses or hex-encoded public keys\n\n**Returns:** Object - multi-signature address and redeemScript",
+      "keywords": [
+        "createmultisig",
+        "utility",
+        "nrequired",
+        "keys",
+        "creates",
+        "multi-signature",
+        "address",
+        "with",
+        "signature",
+        "keys",
+        "required."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"createmultisig\",\n    \"params\": [2, [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"DN8Za...anotheraddress\"]]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"createmultisig\",\n        \"params\": [2, [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"DN8Za...anotheraddress\"]]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"createmultisig\",\n    params: [2, [\"xykDUnFc5v7iFVrvETUfL7V2wi7E8pVRBS\", \"DN8Za...anotheraddress\"]]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getmasternodecount",
+      "type": "rpc_method",
+      "category": "Masternode",
+      "title": "getmasternodecount",
+      "content": "## getmasternodecount\n\n**Category:** Masternode\n\n**Description:** Returns the total count of masternodes in different states.\n\n**Parameters:**\nNone\n\n**Returns:** Object - counts of masternodes by status (total, stable, enabled, inqueue, etc.)",
+      "keywords": [
+        "getmasternodecount",
+        "masternode",
+        "returns",
+        "total",
+        "count",
+        "masternodes",
+        "different",
+        "states."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getmasternodecount\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getmasternodecount\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getmasternodecount\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getmasternodestatus",
+      "type": "rpc_method",
+      "category": "Masternode",
+      "title": "getmasternodestatus",
+      "content": "## getmasternodestatus\n\n**Category:** Masternode\n\n**Description:** Returns the status of the local masternode (if running as a masternode).\n\n**Parameters:**\nNone\n\n**Returns:** Object - masternode status information including status, message, and network information",
+      "keywords": [
+        "getmasternodestatus",
+        "masternode",
+        "returns",
+        "status",
+        "local",
+        "masternode",
+        "running",
+        "masternode)."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getmasternodestatus\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getmasternodestatus\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getmasternodestatus\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_getmasternodewinners",
+      "type": "rpc_method",
+      "category": "Masternode",
+      "title": "getmasternodewinners",
+      "content": "## getmasternodewinners\n\n**Category:** Masternode\n\n**Description:** Returns the masternode winners for recent blocks.\n\n**Parameters:**\n- `count` (number, optional): Number of blocks to show (default 10)\n- `filter` (string, optional): Filter by masternode address\n\n**Returns:** Array - list of block heights and winning masternodes",
+      "keywords": [
+        "getmasternodewinners",
+        "masternode",
+        "count",
+        "filter",
+        "returns",
+        "masternode",
+        "winners",
+        "recent",
+        "blocks."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"getmasternodewinners\",\n    \"params\": [20]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"getmasternodewinners\",\n        \"params\": [20]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"getmasternodewinners\",\n    params: [20]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_listmasternodes",
+      "type": "rpc_method",
+      "category": "Masternode",
+      "title": "listmasternodes",
+      "content": "## listmasternodes\n\n**Category:** Masternode\n\n**Description:** Returns a list of all known masternodes and their information.\n\n**Parameters:**\n- `filter` (string, optional): Filter by masternode address\n\n**Returns:** Array - array of masternode objects with detailed information",
+      "keywords": [
+        "listmasternodes",
+        "masternode",
+        "filter",
+        "returns",
+        "list",
+        "known",
+        "masternodes",
+        "their",
+        "information."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"listmasternodes\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"listmasternodes\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"listmasternodes\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_listmnbroadcasts",
+      "type": "rpc_method",
+      "category": "Masternode",
+      "title": "listmnbroadcasts",
+      "content": "## listmnbroadcasts\n\n**Category:** Masternode\n\n**Description:** Returns a list of masternode broadcast messages.\n\n**Parameters:**\n- `filter` (string, optional): Filter by masternode address\n\n**Returns:** Array - array of masternode broadcast objects",
+      "keywords": [
+        "listmnbroadcasts",
+        "masternode",
+        "filter",
+        "returns",
+        "list",
+        "masternode",
+        "broadcast",
+        "messages."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"listmnbroadcasts\",\n    \"params\": []\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"listmnbroadcasts\",\n        \"params\": []\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"listmnbroadcasts\",\n    params: []\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_mnsync",
+      "type": "rpc_method",
+      "category": "Sync",
+      "title": "mnsync",
+      "content": "## mnsync\n\n**Category:** Sync\n\n**Description:** Returns the sync status of the masternode network. Only 'status' parameter is allowed (read-only).\n\n**Parameters:**\n- `status` (string, required): Must be 'status' - returns the current masternode sync status\n\n**Returns:** Object - masternode sync status information",
+      "keywords": [
+        "mnsync",
+        "sync",
+        "status",
+        "returns",
+        "sync",
+        "status",
+        "masternode",
+        "network.",
+        "only",
+        "'status'",
+        "parameter",
+        "allowed",
+        "(read-only)."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"mnsync\",\n    \"params\": [\"status\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"mnsync\",\n        \"params\": [\"status\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"mnsync\",\n    params: [\"status\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    },
+    {
+      "id": "rpc_spork",
+      "type": "rpc_method",
+      "category": "Sync",
+      "title": "spork",
+      "content": "## spork\n\n**Category:** Sync\n\n**Description:** Shows the current spork values or a specific spork value. Read-only access (no value parameter allowed).\n\n**Parameters:**\n- `sporkname` (string, optional): Name of the spork to query (omit to show all sporks)\n\n**Returns:** Object or Number - spork values or specific spork value",
+      "keywords": [
+        "spork",
+        "sync",
+        "sporkname",
+        "shows",
+        "current",
+        "spork",
+        "values",
+        "specific",
+        "spork",
+        "value.",
+        "read-only",
+        "access",
+        "value",
+        "parameter",
+        "allowed)."
+      ],
+      "examples": {
+        "curl": "curl -X POST {{RPC_ENDPOINT}} \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"curltest\",\n    \"method\": \"spork\",\n    \"params\": [\"SPORK_2_SWIFTTX\"]\n  }'",
+        "python": "import requests\n\nresponse = requests.post(\n    \"{{RPC_ENDPOINT}}\",\n    json={\n        \"jsonrpc\": \"2.0\",\n        \"id\": \"pytest\",\n        \"method\": \"spork\",\n        \"params\": [\"SPORK_2_SWIFTTX\"]\n    }\n)\nprint(response.json()[\"result\"])",
+        "javascript": "const response = await fetch(\"{{RPC_ENDPOINT}}\", {\n  method: \"POST\",\n  headers: { \"Content-Type\": \"application/json\" },\n  body: JSON.stringify({\n    jsonrpc: \"2.0\",\n    id: \"jstest\",\n    method: \"spork\",\n    params: [\"SPORK_2_SWIFTTX\"]\n  })\n});\nconst data = await response.json();\nconsole.log(data.result);"
+      },
+      "citation": "Divi RPC Documentation, https://services.divi.domains/rpc/"
+    }
+  ],
+  "documentCount": 41
+}
