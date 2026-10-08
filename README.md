@@ -3,9 +3,8 @@
 The public part of the knowledge base behind the Divi assistant: the Telegram bot
 [@divi_assistant_bot](https://t.me/divi_assistant_bot) and the chat widget on the divi.domains sites.
 
-Every file in `knowledge/` is one category. The bot pulls this repo every few minutes, so a change
-merged into `main` reaches its answers within about five minutes (GitHub's raw file cache can add a
-few more).
+Every file in `knowledge/` is one category. The bot syncs with this repo about once a minute, so a
+change merged into `main` reaches its answers within a minute or two.
 
 | File | Category |
 |---|---|
@@ -18,9 +17,11 @@ few more).
 
 ## Editing
 
-Edit a file on GitHub (the pencil icon) and propose the change, or open a pull request. In the
-bot's knowledge base app (`/kb` in Telegram), these categories are read-only and each entry has an
-"Edit on GitHub" button that opens its file here.
+Edit here (the pencil icon, or a pull request), or in the bot's knowledge base app (`/kb` in
+Telegram or the browser). The two stay in sync: a change merged here reaches the bot within about
+a minute, and an edit made in the app is committed here by "Divi KB bot", authored by the editor.
+If the same entry was changed in both places at once, this repo's version wins and the app's edit
+is kept on a `bot-conflict-*` branch.
 
 ## Format
 
@@ -47,7 +48,7 @@ bot's knowledge base app (`/kb` in Telegram), these categories are read-only and
 - `"public": true` must stay. A file without it, or with a malformed entry (each needs a string
   `id`, `title` and `content`, a list of string `keywords`, and ids must be unique), is ignored and
   the bot keeps its last good copy.
-- `documentCount` is recomputed by the bot; you don't need to keep it right.
+- `documentCount` is informational; the bot recounts it when it saves an edit.
 - Keep the JSON valid: GitHub's editor doesn't check it.
 
 ## Credits
