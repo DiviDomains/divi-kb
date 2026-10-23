@@ -1,7 +1,39 @@
 {
   "label": "Side Chains",
-  "description": "Added from the KB editor on 2026-10-05",
+  "description": "Divi side chains, starting with Divi Games. Updated 2026-10-23.",
   "public": true,
-  "documents": [],
-  "documentCount": 0
+  "documents": [
+    {
+      "id": "divi_games_wallets_and_bridge",
+      "type": "guide",
+      "title": "Divi Games: play as your IronDivi wallet, and deposit or withdraw tDIVI",
+      "content": "# Divi Games: play as your IronDivi wallet, and move tDIVI in and out\n\nDivi Games (https://games.divi.domains) runs on its own test side chain, `divi-games-testnet-1`. It charges no fees and uses test coins only: GOLD for games, and tDIVI bridged from the Divi testnet. Nothing on it has real value.\n\n## Playing as your wallet\n\nEvery game page (Tic-tac-toe, Blackjack, Tower defense) has **Play as your wallet** with three buttons:\n\n- **Browser Wallet**: the IronDivi Browser Wallet add-on asks you to approve one message. If the add-on is not installed, the page links to it.\n- **Web Wallet**: the IronDivi Web Wallet (https://services.divi.domains/testnet/wallet/) opens in a new window. Unlock it and approve the message. If no message appears once the wallet is unlocked, press **Send the request** on the game page.\n- **Telegram**: the page shows a `/sign testnet …` command. Send it to @divi_wallet_bot, tap **Sign in Wallet**, sign in the wallet that opens, tap **Copy** under the signature, and paste it into the page.\n\nYou sign **one** message, once. It reads `Divi Games session: key <K> may play as this address on divi-games-testnet-1 until <date>`. `<K>` is a new **session key** the page makes and keeps in your browser. Until that date (at most 30 days) the page plays as your wallet's address without asking again: your games, GOLD and wins belong to your wallet address.\n\nA session key can only **play games and use the GOLD faucet**. It cannot send GOLD or tDIVI or withdraw anything; the chain refuses with \"session keys can only play games\". Signing the message moves no coins and costs nothing.\n\n**Disconnect** ends the session on the chain, so the key is worthless even if someone copied it. The owner can also end any of their sessions early. Without that, a session simply expires on its date.\n\nWithout a wallet you can still play: the page makes a **play key** of its own, kept in your browser.\n\n## Depositing tDIVI\n\nThe bridge is switched off on the public chain for now, and while it is off the game page shows no tDIVI panel. When it is on, the game page shows **tDIVI** with the bridge's deposit address. Send testnet DIVI to it with your game address written as the transaction's **memo (OP_RETURN)**:\n\n- **Web Wallet**: the page's link opens the wallet's Send panel with the bridge address, the amount, and your address as the OP_RETURN already filled in. Check and press Send.\n- **Telegram**: the page shows `/send <bridge address> <amount> <your address>`. Send it to @divi_wallet_bot and confirm in the wallet.\n- **Browser Wallet**: it cannot add a memo yet, so use the Web Wallet or Telegram for deposits.\n\nThe chain credits the address in the first OP_RETURN when it is a valid testnet address (and not the bridge address itself). With no usable memo, it credits the address that funded the deposit's first input. One testnet DIVI gives one tDIVI, credited after 6 confirmations on the Divi testnet.\n\n## Withdrawing tDIVI\n\nOn the game page, enter an amount and a Divi testnet address and press **Withdraw**. Your wallet signs the withdrawal itself (the session key cannot), and the withdrawal is queued; the operator pays queued withdrawals to that address by hand, so it is not instant.\n",
+      "keywords": [
+        "divi games",
+        "games.divi.domains",
+        "play as your wallet",
+        "session key",
+        "play key",
+        "web wallet",
+        "browser wallet",
+        "telegram wallet",
+        "sign message",
+        "send the request",
+        "disconnect",
+        "tdivi",
+        "bridge",
+        "deposit",
+        "withdraw",
+        "op_return",
+        "memo",
+        "tic-tac-toe",
+        "blackjack",
+        "tower defense",
+        "gold"
+      ],
+      "category": "Side Chains",
+      "url": "https://games.divi.domains"
+    }
+  ],
+  "documentCount": 1
 }
