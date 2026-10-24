@@ -44,7 +44,41 @@
       ],
       "category": "Side Chains",
       "url": "https://games.divi.domains"
+    },
+    {
+      "id": "divi_games_tictactoe_bot",
+      "type": "guide",
+      "title": "Divi Games: play the tic-tac-toe bot or watch two bots, approve its moves or pick another",
+      "content": "# Divi Games: play the tic-tac-toe bot, or watch two bots play\n\nTic-tac-toe on Divi Games (https://games.divi.domains/play/tictactoe/) has a bot for the second seat. At the top of the lobby:\n\n- **Play the bot** makes a table where you are X and the bot is O.\n- **Watch two bots** makes a table where a bot plays each side.\n\nBot tables have **no stake** (stake 0), so you need no GOLD and nobody needs the faucet. The bot looks at every way the game can go (a full game-tree search called negamax), so it never loses; two bots always draw.\n\n## The bot explains every move before it plays\n\nBefore each bot move the bot panel shows:\n\n- **the move** it wants to play, drawn faintly on the board, with a badge saying whether that move leads to a win, a draw or a loss with best play;\n- **Why**: one sentence, such as \"Blocks X: they would win on the top left next move.\" or \"Takes the centre: it sits on four of the eight lines.\";\n- **Then**: the reply it expects from the other side, also drawn faintly.\n\n## You decide what it plays\n\n- **Approve** plays the move on offer.\n- **Pick another** puts the bot's next-best move on offer instead, with its own reason and outcome. Press it again to keep going down the list (\"Pick another (2 of 7)\").\n- **Tap any free square**, or one of the small move buttons under the panel, to put that square on offer. Then press Approve to play it. You can make the bot play a losing move this way; its badge says \"loss\".\n- **Pace** chooses who presses Approve: \"Ask me before each move\" waits for you; \"Play every 3, 8 or 15 seconds\" counts down and plays the move on offer by itself. Picking another move starts the count again.\n\nThe **Moves** list keeps every move with its reason and marks it **approved**, **your pick** or **auto** (played by the timer). When a game ends, **Play again** starts a new one.\n\n## How it works on the chain\n\nThe bot is not part of the chain. It is two extra testnet keys that the page keeps in the browser's storage (Bot X and Bot O). They sign the same create, join and move transactions a person signs, so the chain treats bot games like any other game, and every bot move is public in the Chain explorer. Play the bot creates a table with stake 0 reserved for Bot O, and Bot O joins it. The bot code is web/play/tictactoe/bot.js in the divi_games repository; the tutorial \"Build tic-tac-toe\" (https://services.divi.domains/tutorials/build-tic-tac-toe/#bot) walks through it. Example: table 311080e52f0e251b on the live chain is a two-bot game that ended in a draw.\n\n## Troubleshooting\n\n- **The bot does not move**: the pace is \"Ask me before each move\", so it waits for Approve. Choose a timed pace to let it play by itself.\n- **I want to play for GOLD**: bot tables are always free. Use New table with a stake and play a person.\n",
+      "keywords": [
+        "divi games",
+        "tic-tac-toe",
+        "tictactoe",
+        "bot",
+        "play the bot",
+        "watch two bots",
+        "bot vs bot",
+        "second seat",
+        "approve",
+        "pick another",
+        "pace",
+        "auto",
+        "your pick",
+        "why",
+        "then",
+        "negamax",
+        "never loses",
+        "draw",
+        "no stake",
+        "free game",
+        "bot tables",
+        "moves list",
+        "play again",
+        "games.divi.domains"
+      ],
+      "category": "Side Chains",
+      "url": "https://games.divi.domains/play/tictactoe/"
     }
   ],
-  "documentCount": 1
+  "documentCount": 2
 }
