@@ -96,7 +96,30 @@
       ],
       "category": "Side Chains",
       "url": "https://games.divi.domains/play/tictactoe/"
+    },
+    {
+      "id": "divi_games_explorer",
+      "type": "guide",
+      "title": "Divi Games: the block explorer, search, transaction and address pages, and why there are empty blocks",
+      "content": "# The Divi Games block explorer\n\nThe Divi Games sidechain (divi-games-testnet-1) has its own block explorer at https://games.divi.domains/explorer (the **Chain** link on the site).\n\n## Search\nThe search box takes a block number, a 64-character transaction id, or an address (dt1...). It opens the block, transaction or address page.\n\n## Transaction page\nhttps://games.divi.domains/explorer/tx/<txid> shows what the transaction did (for example \"tictactoe move\" or \"faucet GOLD\"), who signed it, the block it is in, and whether that block is sealed on Divi yet. When it is sealed, the page links to the Divi transaction that sealed it on the Divi explorer (services.divi.domains).\n\n## Address page\nhttps://games.divi.domains/explorer/address/<address> shows the address's token balances (such as GOLD) and the transactions it signed, newest first.\n\n## Latest blocks and empty heartbeat blocks\nThe home page lists the latest transactions and the latest blocks that hold transactions. The chain makes a block every 2 seconds while there are transactions. When nothing happens it still makes one empty \"heartbeat\" block every 60 seconds, about 1,440 a day, to show it is alive. These are the blocks with 0 transactions.\n\nEmpty blocks are **not** swept into one record each day, and they are never deleted: each block carries the hash of the block before it, so removing one would break the chain. The explorer counts each run of empty blocks in one row (\"N empty heartbeat blocks\"). **Every block** (?all=1) shows every block, empty ones included, 50 per page.\n\n## Sealed on Divi\nThe sidechain writes a small Divi transaction (an OP_RETURN starting DGCH) that records the hash of its newest block. One such anchor seals that block and every block before it. A block with a player transaction is usually sealed within a minute or two. The explorer marks sealed blocks and links each anchor to its Divi transaction.\n",
+      "keywords": [
+        "divi games",
+        "explorer",
+        "block explorer",
+        "heartbeat",
+        "empty block",
+        "0 transactions",
+        "search",
+        "transaction",
+        "address",
+        "sealed",
+        "anchor",
+        "DGCH",
+        "sidechain"
+      ],
+      "category": "Side Chains",
+      "url": "https://games.divi.domains/explorer"
     }
   ],
-  "documentCount": 2
+  "documentCount": 3
 }
