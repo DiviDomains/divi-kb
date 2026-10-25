@@ -185,7 +185,32 @@
       ],
       "category": "Side Chains",
       "url": "https://games.divi.domains/learn/using-divi/03-gold-and-your-first-game"
+    },
+    {
+      "id": "testnet_divi_faucet",
+      "type": "guide",
+      "title": "Testnet DIVI faucet (tDIVI): limits, slow and fast drip, staking winnings only, Telegram-linked addresses",
+      "content": "# The testnet DIVI faucet (tDIVI)\n\nThe testnet faucet at https://services.divi.domains/testnet/faucet/ gives free testnet DIVI (coins with no value, for practising on the Divi test network). It is a different faucet from the Divi Games GOLD faucet.\n\n## What it pays\n- 1,000 testnet DIVI per payout, to an address starting with x or y. A mainnet D address does not work.\n- It pays out only what its wallet has earned by staking. The coins it started with (3,890,000) stay in the wallet and keep staking, so the faucet never empties. When everything earned so far has been paid it answers \"The faucet pays out only its staking winnings, and has paid out all it has earned so far. Please try again in a few hours.\"\n- Its status page https://services.divi.domains/testnet/faucet/api/status shows the balance, how many payouts are available now, the current mode, and whether the wallet is staking.\n\n## Slow drip (the usual mode)\nAnyone can ask, under these limits:\n- one payout per address every 24 hours;\n- two payouts per network (IP address) every 24 hours;\n- 50,000 testnet DIVI a day for the whole faucet, reset at 00:00 UTC.\n\n## Fast drip (when it gets busy)\nIf 100 different networks ask within 2 minutes, the faucet switches to fast drip for one hour and pays only addresses linked to a Telegram account. Others get \"The faucet is busy and paying only Telegram-linked addresses for the next … minute(s). Link this address at https://games.divi.domains/account to claim now.\"\n\n## Telegram-linked addresses\nLog in with Telegram at https://games.divi.domains/account and link your address there; the Divi Games chain records the link (links are recorded from 2 November 2026, 00:00 UTC). A linked address can always claim, in slow or fast drip, and skips the network and daily limits. Each Telegram account gets one payout every 24 hours, whichever of its addresses asks (\"Your Telegram account has already had its allotment\").\n\n## Other refusals\n- \"This address has already received funds. Please wait … minute(s)\": the 24-hour address limit.\n- \"Too many faucet requests from your network\": that network has had its 2 payouts in the last 24 hours.\n- \"The faucet has reached its daily payout limit. Please try again after 00:00 UTC, or link this address …\": the 50,000 daily budget is spent; a linked address can still claim.\n\nPlease send unused coins back to the faucet's return address yJehBfdK9KbrwPRjYrzkrPES9uG5nFLjY4. The tutorial *Get Testnet DIVI* walks through it: https://services.divi.domains/tutorials/testnet-faucet/\n",
+      "keywords": [
+        "testnet faucet",
+        "tdivi",
+        "testnet divi",
+        "faucet",
+        "free testnet coins",
+        "slow drip",
+        "fast drip",
+        "telegram",
+        "linked address",
+        "staking winnings",
+        "24 hours",
+        "daily limit",
+        "return address",
+        "faucet busy",
+        "allotment"
+      ],
+      "category": "Side Chains",
+      "url": "https://services.divi.domains/tutorials/testnet-faucet/"
     }
   ],
-  "documentCount": 5
+  "documentCount": 6
 }
