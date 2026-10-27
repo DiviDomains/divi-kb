@@ -235,7 +235,43 @@
       ],
       "category": "Side Chains",
       "url": "https://games.divi.domains/play/market/"
+    },
+    {
+      "id": "divi_games_verifying_nodes",
+      "type": "guide",
+      "title": "Divi Games: run a verifying node (follower) on the game sidechain, admitted by a certificate from the operator's private CA",
+      "content": "# Divi Games: run a verifying node on the game sidechain\n\nThe Divi Games sidechain (testnet, pinned to Divi testnet) has one sequencer, the operator's node on games.divi.domains, which orders transactions and signs blocks. A **verifying node** (a follower, `divi-gamechain follow`) fetches every block from the sequencer and checks it before storing it, so a sequencer that signs a block its own rules do not produce is caught.\n\n## Who may run one\n\nNode runners are admitted by **certificate**. The operator keeps a private certificate authority (CA) and signs one certificate per runner. The sequencer's peer port, games.divi.domains:7420, speaks only TLS with client certificates and trusts that CA alone: a connection with no certificate, or a certificate another CA signed, is refused during the TLS handshake, before any request is read. The block feed holds nothing secret (the same blocks are public at https://games.divi.domains/chain/v1/); the certificate decides who may be a runner.\n\nTo become a runner:\n\n1. Make your own key and a certificate request; the key never leaves your machine:\n   `openssl req -new -newkey ec -pkeyopt ec_paramgen_curve:P-256 -nodes -keyout runner.key -out runner.csr -subj \"/CN=<your name>\"` then `chmod 600 runner.key`.\n2. Send runner.csr to the operator. They sign it (a client-only certificate, valid one year) and send back runner.crt together with peer-ca.crt, the CA's certificate (not secret; your node uses it to check the sequencer's own certificate).\n3. Write a config and start the node: `divi-gamechain --config runner.toml --data-dir ./chain follow`, with\n   `[follow]` upstream = \"https://games.divi.domains:7420\", sequencer = the sequencer address shown at https://games.divi.domains/chain/v1/info, cert = \"runner.crt\", key = \"runner.key\", ca = \"peer-ca.crt\". The node's own read API listens on 127.0.0.1:7410 by default.\n\n## What the follower checks\n\nOn its first run it fetches the genesis and refuses it unless the chain id matches and the sequencer is the one pinned in `follow.sequencer`. Then for every new block: the height is head + 1 and prev_hash is the head's hash; the block is signed by the pinned sequencer; re-running the block's transactions on the follower's own state gives the same tx_root, state_root, receipts and events. Only then is the block stored.\n\n## Reading its status\n\nThe follower's `/v1/info` has a `follow` field:\n- `state: \"following\"` with `checked_ms`: it is up to date and every block passed.\n- `state: \"halted\"` with `bad_block` and `error`: a block failed a check; it stores nothing more. This is the alarm a runner exists to raise.\n- `state: \"unreachable\"`: a network error; it retries by itself.\n\n## What a follower does not do\n\nIt serves the same read API as the sequencer, so players and tools can point at it, but it holds no sequencer key: it answers 503 to /v1/tx (sending transactions) and runs no house, anchor or bridge task. It catches a dishonest block; it cannot make blocks or move funds. Removing a runner today means changing the CA; a revocation list comes with the second runner. The course \"The side-chain\", lesson 6, covers the same ground: https://games.divi.domains/learn/the-side-chain\n",
+      "keywords": [
+        "divi games",
+        "verifying node",
+        "follower",
+        "follow",
+        "node runner",
+        "run a node",
+        "runner",
+        "peer port",
+        "7420",
+        "private ca",
+        "certificate authority",
+        "client certificate",
+        "mtls",
+        "tls",
+        "csr",
+        "certificate request",
+        "peer-ca.crt",
+        "sequencer",
+        "halted",
+        "bad block",
+        "state root",
+        "replay",
+        "sidechain",
+        "side chain",
+        "gamechain",
+        "divi-gamechain"
+      ],
+      "category": "Side Chains",
+      "url": "https://games.divi.domains/learn/the-side-chain"
     }
   ],
-  "documentCount": 7
+  "documentCount": 8
 }
